@@ -22,18 +22,22 @@ function App() {
   
         <div className="contenedor">          
           <img src={logo2} align="left" className="App-actual-logo2" />
-           Texto tan e                    
+           <div className="formsNombre"> Aitana Landáburu García  </div>
+           <div className="formsUbicacion">Valecia, Spain</div>                  
         </div>
+
+        <hr/>
+
         <div className="contenedor2"> 
           <a href="http://www.google.es/" target="_blank" rel="noreferrer">Ir a Google</a><br/>
           <a href="http://www.yahoo.es/" target="_blank" rel="noreferrer">Ir a Yahoo</a><br/>
           <a href="http://www.bing.es/" target="_blank" rel="noreferrer">Ir a Bing</a><br/>
+        </div> 
 
-          </div> 
-
+          <hr/>
           <div className="contenedor3"> 
           </div> 
-
+          <hr/>
           <div className="contenedor4"> 
           </div> 
           
