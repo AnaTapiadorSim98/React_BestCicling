@@ -128,8 +128,6 @@ function App() {
           <div className="contenedor4"> 
 
           <table className="App-table-ini3">
-          
-
           <tr>
           <th className="App-table3-separacion" >
             ULTIMAS CLASES
@@ -140,18 +138,36 @@ function App() {
             BOTON
           </th>
           </tr>
+          </table>
 
+          <table className="App-table-ini4">
           <tr>
-          <td className="App-table3">NIVEL</td>
-          <td className="App-table3">CONSTANCIA</td>
-          <td className="App-table3">PUNTOS</td>
-          </tr>
 
-          <tr>
-          <td className="App-table3">NIVEL</td>
-          <td className="App-table3">CONSTANCIA</td>
-          <td className="App-table3">PUNTOS</td>
-          </tr>
+            
+
+            <th className="App-table4" >
+              {customData.training_classes[1].name}
+            </th>
+
+            <th className="App-table4">
+              {customData.training_classes[2].name}
+            </th>
+
+            <th className="App-table4">
+              {customData.training_classes[3].name}
+            </th>
+            </tr>
+            <tr>
+            <td className="App-table4">
+            {customData.training_classes[4].name}
+              </td>
+            <td className="App-table4">
+            {customData.training_classes[5].name}
+              </td>
+            <td className="App-table4">
+            {customData.training_classes[6].name}
+              </td>
+            </tr>
           </table>
 
           </div> 
