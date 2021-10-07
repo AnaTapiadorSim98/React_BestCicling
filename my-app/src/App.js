@@ -40,9 +40,42 @@ function App() {
         <hr/>
 
         <div className="contenedor2"> 
-          <a href="http://www.google.es/" target="_blank" rel="noreferrer">Ir a Google</a><br/>
-          <a href="http://www.yahoo.es/" target="_blank" rel="noreferrer">Ir a Yahoo</a><br/>
-          <a href="http://www.bing.es/" target="_blank" rel="noreferrer">Ir a Bing</a><br/>
+          
+            <table className="App-table-ini">
+          
+
+            <tr>
+
+            <th></th>
+
+            <th className="App-table-separacion" >
+              {customData.profile.level}
+            </th>
+
+            <th className="App-table-separacion">
+              {customData.profile.perseverance}
+            </th>
+
+            <th className="App-table-separacion">
+              {customData.profile.mind_points}
+            </th>
+
+
+            </tr>
+
+            <tr>
+
+            <th></th>
+
+            <td className="App-table">NIVEL</td>
+
+            <td className="App-table">CONSTANCIA</td>
+
+            <td className="App-table">PUNTOS</td>
+
+            </tr>
+            </table>
+
         </div> 
 
           <hr/>
