@@ -57,7 +57,7 @@ function App() {
             </th>
 
             <th className="App-table-separacion">
-              {customData.profile.mind_points}
+              {customData.profile.total_points}
             </th>
 
 
@@ -73,6 +73,8 @@ function App() {
 
             <td className="App-table">PUNTOS</td>
 
+            
+
             </tr>
             </table>
 
@@ -80,9 +82,78 @@ function App() {
 
           <hr/>
           <div className="contenedor3"> 
+          <table className="App-table-ini2">
+          
+
+          <tr>
+
+          <th></th>
+
+          <th className="circulo1" >
+            {customData.profile.stamina_points}
+          </th>
+
+          <th className="circulo2">
+            {customData.profile.strength_points}
+          </th>
+
+          <th className="circulo3">
+            {customData.profile.flexiblity_points}
+          </th>
+
+          <th className="circulo4">
+            {customData.profile.mind_points}
+          </th>
+
+
+          </tr>
+
+          <tr>
+
+          <th></th>
+
+          <td className="App-table2">Resistencia</td>
+
+          <td className="App-table2">Fuerza</td>
+
+          <td className="App-table2">Flexibilidad</td>
+
+          <td className="App-table2">Mente</td>
+
+          </tr>
+          </table>
           </div> 
           <hr/>
+
           <div className="contenedor4"> 
+
+          <table className="App-table-ini3">
+          
+
+          <tr>
+          <th className="App-table3-separacion" >
+            ULTIMAS CLASES
+          </th>
+          <th >      
+          </th>
+          <th >
+            BOTON
+          </th>
+          </tr>
+
+          <tr>
+          <td className="App-table3">NIVEL</td>
+          <td className="App-table3">CONSTANCIA</td>
+          <td className="App-table3">PUNTOS</td>
+          </tr>
+
+          <tr>
+          <td className="App-table3">NIVEL</td>
+          <td className="App-table3">CONSTANCIA</td>
+          <td className="App-table3">PUNTOS</td>
+          </tr>
+          </table>
+
           </div> 
           
     </div>
@@ -90,39 +161,3 @@ function App() {
   );
 }
 export default App;
-
-
-//function App() {
- // return (
-
-  /*  <div className="App">
-        <header className="App-use-head">
-          <title>
-          <img src={nlogo} className="App-logo" alt="logo" />
-          </title>
-        </header>
-      </div>
-      */
-    /*<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>*/
- // );
-//}
-
-
-
-
-//export default App;

@@ -26,21 +26,48 @@
 .App-table-ini{
   span: "2";
   
-  padding: 0px 0px 0px 35%;
+  padding: 0px 9px 0px 35%;
   align-items: center;
   align-self: center;
   align-content: center;
   text-align: center;  
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 30px;
+  color:white; 
+}
+.App-table-ini2{
+  span: "2";
+  
+  padding: 50px 9px 0px 35%;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color:white; 
+}
+
+.App-table-ini3{
+  span: "2";
+  
+  padding: 50px 9px 0px 35%;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
   color:white; 
 }
 
 .App-table{
   span: "2";
   
-  padding: 0px 0px 0px 0%;
+  padding: 0px 0px 15px 0px;
   align-items: center;
   align-self: center;
   align-content: center;
@@ -51,9 +78,78 @@
   color:rgb(77, 67, 67); 
 }
 
+.App-table2{
+  span: "2";
+  
+  padding: 25px 0px 15px 0px;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color:rgb(77, 67, 67); 
+}
+
+.App-table3{
+  span: "2";
+  
+  padding: 0px 0px 0px 0px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color:rgb(77, 67, 67); 
+}
+
 .App-table-separacion{
   
   padding: 50px 50px 15px 50px;
+}
+
+.App-table2-separacion{
+  
+  padding: 100px 50px 30px 50px;
+}
+
+.App-table3-separacion{
+  
+  padding: 0px 100px 0px 0px;
+}
+
+.circulo1{
+  
+  height:100px;
+  width:100px;
+  background:#e44444;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
+}
+.circulo2{
+  height:100px;
+  width:100px;
+  background:#9ffa6a;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
+}
+.circulo3{
+  height:100px;
+  width:100px;
+  background:#6ae4fa;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
+}
+.circulo4{
+  height:100px;
+  width:100px;
+  background:#faf86a;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius:50px;
 }
 
 
