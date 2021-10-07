@@ -9,7 +9,16 @@ import React from 'react';
 import Frame from 'react-frame-component';
 import Header from './header/Header';
 import FirstPage from './FirstPage/FirstPage';
+import customData2 from './db.json';
+import ReactJson from 'react-json-view'
 
+const customData = require('./db.json');
+const nombre =  customData.profile.name ;
+
+
+// Aitana Landáburu García
+
+//<ReactJson src={customData.profile.name.toString()} />
 function App() {
   return (
     
@@ -22,7 +31,9 @@ function App() {
   
         <div className="contenedor">          
           <img src={logo2} align="left" className="App-actual-logo2" />
-           <div className="formsNombre"> Aitana Landáburu García  </div>
+           <div className="formsNombre"  > 
+                {nombre}   
+            </div>
            <div className="formsUbicacion">Valecia, Spain</div>                  
         </div>
 

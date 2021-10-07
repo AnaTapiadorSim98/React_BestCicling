@@ -5,13 +5,11 @@
 }
 
 .contenedor4{
-  height: 25%;
-  background-color: rgba(197, 27, 146, 0.753);
-}
+  height: 20%;
+ }
 
 .contenedor3{
   height: 25%;
-  background-color: rgba(27, 197, 55, 0.753);
 }
 
 .contenedor2{
@@ -36,7 +34,7 @@
   font-weight: bold;
   font-size: 30px;
   color:white; 
-  padding: 70px 580px 0px 0px;
+  padding: 70px 735px 0px 0px;
 }
 
 .formsUbicacion{
