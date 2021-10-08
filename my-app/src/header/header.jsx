@@ -1,7 +1,11 @@
-class Header extends Component {
-    render() {
-      return (<div>Your header</div>);
-    }
-  }
+import React from 'react';
+import logo from '../imagenes/logo-big.png';
 
-  export default Header;
+const Header = () => (
+    <div className="App-actual-header">
+        <img src={logo} className="App-logo" alt="logo" />
+    </div>
+);
+
+
+export default Header;
