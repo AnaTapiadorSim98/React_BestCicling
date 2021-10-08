@@ -4,6 +4,8 @@
   height: 1200px;
 }
 
+
+
 .contenedor4{
   height: 20%;
   align-items: center;
@@ -51,6 +53,7 @@
 }
 
 .letras_mini_blancas{
+  
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 15px;
@@ -63,6 +66,30 @@
   font-weight: bold;
   font-size: 15px;
   padding: 5px 0px 0px 10px;
+  color:rgb(129, 113, 113); 
+}
+
+.letra_blancas{
+  align-items: left;
+  align-self: left;
+  align-content: left;
+  text-align: left; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color:white; 
+  padding: 0px 0px 0px 15px;
+}
+
+.letra_gris{
+  align-items: right;
+  align-self: right;
+  align-content: right;
+  text-align: right; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0px 85px 0px 0px;
   color:rgb(129, 113, 113); 
 }
 
@@ -305,6 +332,7 @@
 }
 
 .grid-container {
+  
   display: grid;
   grid-column-gap: 50px;
   grid-row-gap: 15px;

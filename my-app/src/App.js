@@ -37,6 +37,13 @@ function obtener_instructor(numero) {
 
 }
 
+
+ 
+function lanzar_clases(){
+  console.log("CLICKED");
+}
+
+
 // Aitana Landáburu García
 
 //<ReactJson src={customData.profile.name.toString()} />
@@ -153,7 +160,7 @@ function App() {
           <div class="grid-container">
           <div class="grid-item">
 
-          ÚLTIMAS CLASES
+            <div class="letra_blancas"> ÚLTIMAS CLASES </div>
 
           </div>
 
@@ -163,7 +170,11 @@ function App() {
           
           </div>
           <div class="grid-item">
-            BOTON
+            <div class="letra_gris">
+              <button onClick={lanzar_clases()}>
+                VER TODAS 
+              </button>
+            </div>
           </div>
           <div class="grid-item">
           <div className="contenedor_grid">          
