@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: 	#1d1f24;
-  height: 1000px;
+  height: 1200px;
 }
 
 .contenedor4{
@@ -10,6 +10,7 @@
   align-self: center;
   align-content: center;
   text-align: center; 
+  margin: 30px 0px 0px 0px;
  }
 
 .contenedor3{
@@ -25,6 +26,44 @@
   height: 25%;
   
   margin: 1% 1%;
+}
+
+.contenedor_grid{
+  height: 500px;
+  
+  margin: 0px 0px;
+}
+
+.desplazar-contenedor-gris{
+  padding: 10px 0px 0px 12px;
+}
+
+.contenedor-gris{
+  width: 300px; 
+  height: 50px; 
+  border: rgb(77, 67, 67); 
+  background:rgb(77, 67, 67); 
+  align-items: left;
+  align-self: left;
+  align-content: left;
+  text-align: left;  
+  
+}
+
+.letras_mini_blancas{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color:white; 
+  padding: 5px 0px 0px 10px;
+}
+
+.letras_mini_gris{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px 0px 0px 10px;
+  color:rgb(129, 113, 113); 
 }
 
 .App-table-ini{
@@ -153,7 +192,7 @@
   padding: 0px 50px 0px 50px;
 }
 
-.circulo1{
+.circulo2{
   
   height:100px;
   width:100px;
@@ -162,7 +201,7 @@
   -webkit-border-radius:50px;
   border-radius:50px;
 }
-.circulo2{
+.circulo3{
   height:100px;
   width:100px;
   background:#9ffa6a;
@@ -170,7 +209,7 @@
   -webkit-border-radius:50px;
   border-radius:50px;
 }
-.circulo3{
+.circulo4{
   height:100px;
   width:100px;
   background:#6ae4fa;
@@ -178,7 +217,7 @@
   -webkit-border-radius:50px;
   border-radius:50px;
 }
-.circulo4{
+.circulo1{
   height:100px;
   width:100px;
   background:#faf86a;
@@ -219,6 +258,25 @@
   pointer-events: none;
 }
 
+.App-logo-mini {
+  height: 30px;
+  top: 0px;
+  padding: 0px 0px 0px 15px;
+  align-items: left;
+  justify-content: left;
+  pointer-events: none;
+}
+
+.App-fecha-mini{
+  padding: 9px 115px 0px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color:rgb(77, 67, 67); 
+  
+
+}
+
 /*@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -239,6 +297,24 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-raya{
+  border: 1px solid rgba(77, 67, 67,.3);
+  
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 15px;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows: 65px 65px 65px;
+}
+
+.grid-item {
+  display: grid;
+  grid-column-gap: 50px;
 }
 
 /*@keyframes App-logo-spin {

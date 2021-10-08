@@ -14,7 +14,28 @@ import ReactJson from 'react-json-view'
 
 const customData = require('./db.json');
 const nombre =  customData.profile.name ;
+//var d = new Date(customData.training_classes[2].published.valueOf());
 
+function tranformar_fecha(number) {
+
+  const dateObject = new Date(number);
+  var mes = dateObject.toLocaleString("es-ES", {month: "short"}) // December
+  var dia =dateObject.toLocaleString("es-ES", {day: "numeric"}) // 9
+  var anno =dateObject.toLocaleString("es-ES", {year: "numeric"}) // 2019
+
+  return dia + " " + mes.charAt(0).toUpperCase() +  mes.slice(1) + " " + anno;
+}
+
+function obtener_instructor(numero) {
+  var i = 0;
+  while(1 <  Object.keys(customData.instructors).length ){
+      if (numero == customData.instructors[i].id){
+        return customData.instructors[i].name;
+      }
+      i++;
+  }
+
+}
 
 // Aitana Landáburu García
 
@@ -37,7 +58,7 @@ function App() {
            <div className="formsUbicacion">Valecia, Spain</div>                  
         </div>
 
-        <hr/>
+        <hr className="App-raya"/>
 
         <div className="contenedor2"> 
           
@@ -80,7 +101,7 @@ function App() {
 
         </div> 
 
-          <hr/>
+          <hr className="App-raya"/>
           <div className="contenedor3"> 
           <table className="App-table-ini2">
           
@@ -123,52 +144,106 @@ function App() {
           </tr>
           </table>
           </div> 
-          <hr/>
+          <hr className="App-raya"/>
 
           <div className="contenedor4"> 
 
-          <table className="App-table-ini3">
-          <tr>
-          <th className="App-table3-separacion" >
-            ULTIMAS CLASES
-          </th>
-          <th >      
-          </th>
-          <th >
+          
+
+          <div class="grid-container">
+          <div class="grid-item">
+
+          ÚLTIMAS CLASES
+
+          </div>
+
+          <div class="grid-item">
+
+          
+          
+          </div>
+          <div class="grid-item">
             BOTON
-          </th>
-          </tr>
-          </table>
+          </div>
+          <div class="grid-item">
+          <div className="contenedor_grid">          
+            <img src={logo} align="left" className="App-logo-mini" />
+            <div className="App-fecha-mini"> {tranformar_fecha(customData.training_classes[1].published)} </div>      
+            <div className="desplazar-contenedor-gris"> <div className="contenedor-gris"> 
+                <div className="letras_mini_blancas"> {customData.training_classes[1].name} </div>
+                
+                <div className="letras_mini_gris"> {obtener_instructor(customData.training_classes[1].instructor_id)} </div>
+          </div>
 
-          <table className="App-table-ini4">
-          <tr>
+          </div>            
+          </div>
+          </div>
+          <div class="grid-item">
+          <div className="contenedor_grid">          
+            <img src={logo} align="left" className="App-logo-mini" />
+            <div className="App-fecha-mini"> {tranformar_fecha(customData.training_classes[2].published)} </div>      
+            <div className="desplazar-contenedor-gris"> <div className="contenedor-gris"> 
+                <div className="letras_mini_blancas"> {customData.training_classes[2].name} </div>
+                
+                <div className="letras_mini_gris"> {obtener_instructor(customData.training_classes[2].instructor_id)} </div>
+          </div>
 
-            
+          </div>            
+          </div>
+          </div>
+          <div class="grid-item">
+          <div className="contenedor_grid">          
+            <img src={logo} align="left" className="App-logo-mini" />
+            <div className="App-fecha-mini"> {tranformar_fecha(customData.training_classes[3].published)} </div>      
+            <div className="desplazar-contenedor-gris"> <div className="contenedor-gris"> 
+                <div className="letras_mini_blancas"> {customData.training_classes[3].name} </div>
+                
+                <div className="letras_mini_gris"> {obtener_instructor(customData.training_classes[3].instructor_id)} </div>
+          </div>
 
-            <th className="App-table4" >
-              {customData.training_classes[1].name}
-            </th>
+          </div>            
+          </div>
+          </div>
+          <div class="grid-item">
+          <div className="contenedor_grid">          
+            <img src={logo} align="left" className="App-logo-mini" />
+            <div className="App-fecha-mini"> {tranformar_fecha(customData.training_classes[4].published)} </div>      
+            <div className="desplazar-contenedor-gris"> <div className="contenedor-gris"> 
+                <div className="letras_mini_blancas"> {customData.training_classes[4].name} </div>
+                
+                <div className="letras_mini_gris"> {obtener_instructor(customData.training_classes[4].instructor_id)} </div>
+          </div>
 
-            <th className="App-table4">
-              {customData.training_classes[2].name}
-            </th>
+          </div>            
+          </div>
+          </div>
+          <div class="grid-item">
+          <div className="contenedor_grid">          
+            <img src={logo} align="left" className="App-logo-mini" />
+            <div className="App-fecha-mini"> {tranformar_fecha(customData.training_classes[5].published)} </div>      
+            <div className="desplazar-contenedor-gris"> <div className="contenedor-gris"> 
+                <div className="letras_mini_blancas"> {customData.training_classes[5].name} </div>
+                
+                <div className="letras_mini_gris"> {obtener_instructor(customData.training_classes[5].instructor_id)} </div>
+          </div>
 
-            <th className="App-table4">
-              {customData.training_classes[3].name}
-            </th>
-            </tr>
-            <tr>
-            <td className="App-table4">
-            {customData.training_classes[4].name}
-              </td>
-            <td className="App-table4">
-            {customData.training_classes[5].name}
-              </td>
-            <td className="App-table4">
-            {customData.training_classes[6].name}
-              </td>
-            </tr>
-          </table>
+          </div>            
+          </div>
+          </div>
+          <div class="grid-item">
+          <div className="contenedor_grid">          
+            <img src={logo} align="left" className="App-logo-mini" />
+            <div className="App-fecha-mini"> {tranformar_fecha(customData.training_classes[6].published)} </div>      
+            <div className="desplazar-contenedor-gris"> <div className="contenedor-gris"> 
+                <div className="letras_mini_blancas"> {customData.training_classes[6].name} </div>
+                
+                <div className="letras_mini_gris"> {obtener_instructor(customData.training_classes[6].instructor_id)} </div>
+          </div>
+
+          </div>            
+          </div>
+          </div>
+          </div>
 
           </div> 
           
