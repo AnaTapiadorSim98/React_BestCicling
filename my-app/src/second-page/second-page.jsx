@@ -1,7 +1,6 @@
-class SecondPage extends Component {
-    render() {
+function SecondPage(){
       return (<div>Second page body</div>);
-    }
+    
   }
 
 
