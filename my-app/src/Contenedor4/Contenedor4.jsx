@@ -31,7 +31,7 @@ function tranformar_fecha(number) {
   function lanzar_clases() {
     window.open('../FirstPage', 'Todas las clases')
   
-  // this.props.history.push({to: 'https://google.com'});
+   //this.props.history.push({to: 'https://google.com'});
   }
 
 const Contenedor4 = () =>  (
