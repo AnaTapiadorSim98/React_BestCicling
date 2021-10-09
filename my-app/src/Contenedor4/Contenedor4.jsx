@@ -29,7 +29,7 @@ function tranformar_fecha(number) {
 
 
   function lanzar_clases() {
-    window.open('../FirstPage', 'Todas las clases')
+    window.location = "/clases";
   
   // this.props.history.push({to: 'https://google.com'});
   }
