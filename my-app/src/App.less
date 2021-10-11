@@ -1,0 +1,336 @@
+////// CONSTANTS //////
+// Color constants
+@yellow: #fcd900;
+@red: #f13b46;
+@green: #69ae00;
+@blue: #1d8cb9;
+@orange: #ff6400;
+@purple: #8d88c5;
+
+// Interface
+@background_color: #151515; // almost black
+@first_font_color: #ffffff; // white
+@second_font_color: #acacac; // gray
+@second_font_color: #838383; // darker gray
+@third_font_color: #b5b5b5;
+@first_interface_color: #343434; // kind of light black
+@second_interface_color: @orange; // orange
+@dot_size: 125px;
+@lesson_content_padding: 10px;
+@lesson_content_image_width: calc(100% + (@lesson_content_padding * 2));
+@lesson_footer_background_color: #2f2f2f; // lighter black
+@bright_dot_color: #cecece; // bright gray
+@dark_dot_color: #505050; // dark gray
+
+
+////// ALL PAGES //////
+html, body {
+  background-color: @background_color;
+}
+
+h1, h2, h3, h4, p, th, tr, td {
+  color: @first_font_color;
+}
+
+// Pages size limit
+.Home, .List {
+  max-width: 1300px;
+  margin: auto;
+}
+
+// Separation between sections
+hr.separation_line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid @first_interface_color;
+  margin: 1em 3em;
+  padding: 0;
+}
+
+// Float container size clear trick
+.flow_root_container {
+  display: flow-root;
+}
+
+.flow_root_container > * {
+  float: left;
+}
+
+// Simple shapes and styles
+.dot {
+  background-color: gray;
+  height: @dot_size;
+  width: @dot_size;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.corner_triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-bottom: 30px solid black;
+}
+
+// Background colors
+.yellow { background-color: @yellow; }
+.red { background-color: @red; }
+.green { background-color: @green; }
+.blue { background-color: @blue; }
+.orange { background-color: @orange; }
+
+// Border colors
+.corner_triangle { border-left: 30px solid transparent; }
+.corner_triangle.yellow_triangle { border-bottom: 30px solid @yellow; }
+.corner_triangle.red_triangle { border-bottom: 30px solid @red; }
+.corner_triangle.green_triangle { border-bottom: 30px solid @green; }
+.corner_triangle.blue_triangle { border-bottom: 30px solid @blue; }
+.corner_triangle.orange_triangle { border-bottom: 30px solid @orange; }
+.corner_triangle.purple_triangle { border-bottom: 30px solid @purple; }
+
+////// HEADER //////
+#root > div > div > nav {
+  padding: 0;
+}
+
+#header_logo_link {
+  height: 55px;
+  padding: 0;
+}
+
+#header_logo_link > img {
+  height: 100%;
+}
+
+.navigation .navbar .container {
+  margin: 0;
+  padding-left: 40px;
+}
+
+////// HOME PAGE //////
+
+//// Profile data
+.ProfileData {
+  padding: 50px 80px;
+}
+
+#best_cycling_icon {
+  width: 250px;
+}
+
+#profile_info_container {
+  margin: 40px 30px;
+}
+
+#profile_info_container > h2 {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+#profile_info_container > div > img {
+  height: 35px;
+  margin-right: 8px;
+}
+
+#profile_info_container > div > h4 {
+  margin-bottom: 0;
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  line-height: 35px;
+  font-size: 1.2rem;
+  color: @second_font_color;
+}
+
+//// Stat data
+.StatData {
+  padding: 15px 10%;
+}
+
+.fixed_table {
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.StatData > table {
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.StatData > table > thead th {
+  font-size: 25px;
+}
+
+.StatData > table > tbody td {
+  color: @second_font_color;
+  font-size: 17px;
+}
+
+//// Stat icons
+.StatIcons {
+  padding: 0 20%;
+  min-width: 550px;
+  box-sizing: content-box;
+}
+
+.StatIcons > table {
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+
+.fixed_table .dot span {
+  line-height: @dot_size;
+  font-size: 36px;
+}
+
+.StatIcons tbody td {
+  color: @second_font_color;
+  font-size: 18px;
+}
+
+.StatIcons table {
+  margin-bottom: 60px;
+}
+
+//// Lessons
+.LessonsContainer {
+  padding: 35px;
+  max-width: 1300px;
+}
+
+.LessonsContainer a {
+  text-decoration: none;
+}
+
+.LessonsContainer .flow_root_container {
+  padding: 0 10px 0 10px;
+  margin-bottom: 15px;
+}
+
+.LessonsContainer .flow_root_container h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 50px;
+  position: relative;
+  top: 5px;
+}
+
+.LessonsContainer .flow_root_container a {
+  float: right;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: @second_interface_color;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  font-weight: 600;
+}
+
+.lesson_content {
+  background-color: @first_interface_color;
+}
+
+.lesson_header {
+  height: 50px;
+}
+
+.lesson_header > img {
+  height: 100%;
+}
+
+.lesson_header > span {
+  float: right;
+  line-height: 50px;
+  color: @second_font_color;
+}
+
+.lesson_content {
+  padding: @lesson_content_padding;
+}
+
+.lesson_content .lesson_title {
+  margin: 0 0 2px 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.lesson_content .lesson_teacher_name {
+  color: @second_font_color;
+}
+
+.LessonsContainer .container {
+  width: 102%;
+  max-width: none;
+  margin: 0 0 0 -1%;
+}
+
+.LessonsContainer .container .col {
+  margin-bottom: 10px;
+}
+
+////// LESSON LIST PAGE //////
+.LessonsContainer .lesson_content {
+  background-color: @lesson_footer_background_color;
+  position: relative;
+}
+
+.lesson_content img {
+  width: @lesson_content_image_width;
+  // height: calc((@lesson_content_image_width) * 19 / 24);
+  margin: -(@lesson_content_padding) -(@lesson_content_padding) 0 -(@lesson_content_padding);
+}
+
+.list_lesson_description {
+  position: absolute;
+}
+
+.LessonsContainer .lesson_footer {
+  height: 45px;
+  padding: 2px 6px;
+}
+
+.LessonsContainer .lesson_footer .fixed_table .first_column {
+  text-align: left;
+}
+
+.LessonsContainer .lesson_footer .fixed_table .third_column {
+  text-align: right;
+}
+
+.LessonsContainer .lesson_footer .fixed_table th {
+  font-weight: normal;
+  color: @third_font_color;
+}
+
+.level_dots span {
+  margin-right: 7px;
+}
+
+.level_dots span.dot {
+  width: 9px;
+  height: 9px;
+  margin-right: 0;
+  margin-left: 6px;
+  background-color: @dark_dot_color;
+}
+
+.LessonsContainer .lesson_content .corner_triangle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.level_one_lesson .dot:nth-child(2) {
+  background-color: @bright_dot_color;
+}
+
+.level_two_lesson .dot:nth-child(2), .level_two_lesson .dot:nth-child(3) {
+  background-color: @bright_dot_color;
+}
+
+.level_three_lesson .dot:nth-child(2), .level_three_lesson .dot:nth-child(3), .level_three_lesson .dot:nth-child(4) {
+  background-color: @bright_dot_color;
+}
