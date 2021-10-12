@@ -33,7 +33,7 @@ h1, h2, h3, h4, p, th, tr, td {
 }
 
 // Pages size limit
-.Home, .List {
+.Home, .List, .Player {
   max-width: 1300px;
   margin: auto;
 }
@@ -334,3 +334,51 @@ hr.separation_line {
 .level_three_lesson .dot:nth-child(2), .level_three_lesson .dot:nth-child(3), .level_three_lesson .dot:nth-child(4) {
   background-color: @bright_dot_color;
 }
+
+////// LESSON LIST PAGE //////
+.player_header {
+  padding: 45px 50px 20px 50px;
+}
+
+.player_header a img {
+  height: 70px;
+}
+
+.Player .lesson_title {
+  margin-left: 30px;
+}
+
+.Player .lesson_title h2 {
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.Player .lesson_title h4 {
+  font-size: 26px;
+  margin-top: 12px;
+}
+
+.player_container {
+  width: 90%;
+  margin-left: 5%;
+  position: relative;
+  display: table;
+}
+
+.fake_player {
+  width: 100%;
+  position: relative;
+}
+
+.player_container span {
+  font-size: 300px;
+  font-weight: bold;
+  color: white;
+  display: table-cell;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  top: 12%;
+  left: 40%;
+}
+

@@ -1,34 +1,10 @@
-/*import React from 'react';
-import Contenedor1 from '../Contenedor1';
-import Contenedor2 from '../Contenedor2';
-import Contenedor3 from '../Contenedor3';
-import Contenedor4 from '../Contenedor4';
-
-export function Home() {
-    return (
-        <div className="Home">
-            <Contenedor1 />
-
-            <hr className="App-raya" />
-
-            <Contenedor2 />
-
-            <hr className="App-raya" />
-
-            <Contenedor3 />
-
-            <hr className="App-raya" />
-
-            <Contenedor4 />
-        </div>
-    );
-}
-*/
-
 import React from "react";
 import best_cycling_icon from '../images/best_cycling_orange_icon.png';
 import location_pointer_icon from '../images/location_pointer_icon.png';
 import short_logo from '../images/short_cycling_logo.png';
+
+const customData = require('../db.json');
+const nombre = customData.profile.name;
 
 export function Home() {
     return (
@@ -40,13 +16,35 @@ export function Home() {
     );
 }
 
+function tranformar_fecha(number) {
+    
+    const dateObject = new Date(number);
+    var mes = dateObject.toLocaleString("es-ES", { month: "short" }) // December
+    var dia = dateObject.toLocaleString("es-ES", { day: "numeric" }) // 9
+    var anno = dateObject.toLocaleString("es-ES", { year: "numeric" }) // 2019
+  
+    return dia + " " + mes.charAt(0).toUpperCase() + mes.slice(1) + " " + anno;
+    
+  }
+  
+  function obtener_instructor(numero) {
+    var i = 1;
+    while (i < Object.keys(customData.instructors).length) {
+      if (numero == customData.instructors[i].id) {
+        return customData.instructors[i].name;
+      }
+      i++;
+    }
+  
+  }
+
 function Profile() {
     return (
         <>
         <div className="ProfileData flow_root_container">
             <img id="best_cycling_icon" src={ best_cycling_icon } alt={"profile"}/>
             <div id="profile_info_container" >
-                <h2>Aitana Landáburu García</h2>
+                <h2>{nombre}</h2>
                 <div className="flow_root_container">
                     <img src={ location_pointer_icon } alt={"location icon"}/>
                     <h4>Valencia, Spain</h4>
@@ -75,9 +73,9 @@ function StatData() {
             <table className="fixed_table">
                 <thead>
                 <tr>
-                    <th>3</th>
-                    <th>129</th>
-                    <th>1020</th>
+                    <th>{customData.profile.level}</th>
+                    <th>{customData.profile.perseverance}</th>
+                    <th>{customData.profile.total_points}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -98,10 +96,10 @@ function StatIcons() {
             <table className="fixed_table">
                 <thead>
                 <tr>
-                    <th><div className="dot yellow"><span>38</span></div></th>
-                    <th><div className="dot red"><span>3</span></div></th>
-                    <th><div className="dot green"><span>120</span></div></th>
-                    <th><div className="dot blue"><span>14</span></div></th>
+                    <th><div className="dot yellow"><span>{customData.profile.stamina_points}</span></div></th>
+                    <th><div className="dot red"><span>{customData.profile.strength_points}</span></div></th>
+                    <th><div className="dot green"><span>{customData.profile.flexiblity_points}</span></div></th>
+                    <th><div className="dot blue"><span>{customData.profile.mind_points}</span></div></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -130,12 +128,12 @@ function Lessons() {
                         <div className="lesson_element col">
                             <div className="lesson_header">
                                 <img src={ short_logo } alt="logo best cycling clase" />
-                                <span className="lesson_date">12 Ene 2018</span>
+                                <span className="lesson_date">{tranformar_fecha(customData.training_classes[1].published)}</span>
                             </div>
                             <a href="/clases">
                                 <div className="lesson_content">
-                                    <h4 className="lesson_title">BC13 / Las tres montañas</h4>
-                                    <span className="lesson_teacher_name">Lorena Isasi</span>
+                                    <h4 className="lesson_title">{customData.training_classes[1].name}</h4>
+                                    <span className="lesson_teacher_name">{obtener_instructor(customData.training_classes[1].instructor_id)}</span>
                                 </div>
                             </a>
                         </div>
@@ -144,12 +142,12 @@ function Lessons() {
                         <div className="lesson_element col">
                             <div className="lesson_header">
                                 <img src={ short_logo } alt="logo best cycling clase" />
-                                <span className="lesson_date">12 Ene 2018</span>
+                                <span className="lesson_date">{tranformar_fecha(customData.training_classes[2].published)}</span>
                             </div>
                             <a href="/clases" target="_blank" rel="noreferrer">
                                 <div className="lesson_content">
-                                    <h4 className="lesson_title">BC13 / Las tres montañas</h4>
-                                    <span className="lesson_teacher_name">Lorena Isasi</span>
+                                    <h4 className="lesson_title">{customData.training_classes[2].name}</h4>
+                                    <span className="lesson_teacher_name">{obtener_instructor(customData.training_classes[2].instructor_id)}</span>
                                 </div>
                             </a>
                         </div>
@@ -158,12 +156,12 @@ function Lessons() {
                         <div className="lesson_element col">
                             <div className="lesson_header">
                                 <img src={ short_logo } alt="logo best cycling clase" />
-                                <span className="lesson_date">12 Ene 2018</span>
+                                <span className="lesson_date">{tranformar_fecha(customData.training_classes[3].published)}</span>
                             </div>
                             <a href="/clases" target="_blank" rel="noreferrer">
                                 <div className="lesson_content">
-                                    <h4 className="lesson_title">BC13 / Las tres montañas</h4>
-                                    <span className="lesson_teacher_name">Lorena Isasi</span>
+                                    <h4 className="lesson_title">{customData.training_classes[3].name}</h4>
+                                    <span className="lesson_teacher_name">{obtener_instructor(customData.training_classes[3].instructor_id)}</span>
                                 </div>
                             </a>
                         </div>
@@ -172,12 +170,40 @@ function Lessons() {
                         <div className="lesson_element col">
                             <div className="lesson_header">
                                 <img src={ short_logo } alt="logo best cycling clase" />
-                                <span className="lesson_date">12 Ene 2018</span>
+                                <span className="lesson_date">{tranformar_fecha(customData.training_classes[4].published)}</span>
                             </div>
                             <a href="/clases" target="_blank" rel="noreferrer">
                                 <div className="lesson_content">
-                                    <h4 className="lesson_title">BC13 / Las tres montañas</h4>
-                                    <span className="lesson_teacher_name">Lorena Isasi</span>
+                                    <h4 className="lesson_title">{customData.training_classes[4].name}</h4>
+                                    <span className="lesson_teacher_name">{obtener_instructor(customData.training_classes[4].instructor_id)}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="lesson_element col">
+                            <div className="lesson_header">
+                                <img src={ short_logo } alt="logo best cycling clase" />
+                                <span className="lesson_date">{tranformar_fecha(customData.training_classes[5].published)}</span>
+                            </div>
+                            <a href="/clases" target="_blank" rel="noreferrer">
+                                <div className="lesson_content">
+                                    <h4 className="lesson_title">{customData.training_classes[5].name}</h4>
+                                    <span className="lesson_teacher_name">{obtener_instructor(customData.training_classes[5].instructor_id)}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="lesson_element col">
+                            <div className="lesson_header">
+                                <img src={ short_logo } alt="logo best cycling clase" />
+                                <span className="lesson_date">{tranformar_fecha(customData.training_classes[6].published)}</span>
+                            </div>
+                            <a href="/clases" target="_blank" rel="noreferrer">
+                                <div className="lesson_content">
+                                    <h4 className="lesson_title">{customData.training_classes[6].name}</h4>
+                                    <span className="lesson_teacher_name">{obtener_instructor(customData.training_classes[6].instructor_id)}</span>
                                 </div>
                             </a>
                         </div>
