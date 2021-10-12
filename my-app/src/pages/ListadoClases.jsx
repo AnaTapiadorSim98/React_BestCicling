@@ -12,7 +12,14 @@ function tranformar_fecha(number) {
     var dia = dateObject.toLocaleString("es-ES", { day: "numeric" }) // 9
     var anno = dateObject.toLocaleString("es-ES", { year: "numeric" }) // 2019
   
-    return dia + " " + mes.charAt(0).toUpperCase() + mes.slice(1) + " " + anno;
+    return dia + " " + mes.charAt(0).toUpperCase() + mes.slice(1) ;
+    
+  }
+
+  function tranformar_duracion(number) {
+    
+    let res = Math.floor(number / 60);
+    return "Duración " + res + "'";
     
   }
   
@@ -94,6 +101,71 @@ function ListadoNombre() {
                 
     );
 }
+
+export function ListadoImagenes() {
+    return (
+        <div className="List">
+            <ListadoImagen/>
+        </div>
+    );
+}
+
+function ListadoImagen() {
+    
+    const listaImagenes = []; 
+    let j = 0;
+    const imagenes = [];
+    while(j < Object.keys(customData.instructors).length){
+        imagenes.push(obtener_instructor(customData.training_classes[j].image));
+        j++;
+    }
+
+    
+    let i = 100;
+    for (let imagen of imagenes) {
+        listaImagenes.push(<UnaClase key={i} my_image={imagen} />)
+        i++;
+    }
+
+    return (
+        <div> {listaImagenes}</div>
+                   
+                
+    );
+}
+
+export function ListadoFechas() {
+    return (
+        <div className="List">
+            <ListadoFecha/>
+        </div>
+    );
+}
+
+function ListadoFecha() {
+    
+    const listaFechas = []; 
+    let j = 0;
+    const fechas = [];
+    while(j < Object.keys(customData.instructors).length){
+        fechas.push(tranformar_duracion(customData.training_classes[j].duration));
+        j++;
+    }
+
+    
+    let i = 100;
+    for (let fecha of fechas) {
+        listaFechas.push(<UnaClase key={i} my_date={fecha} />)
+        i++;
+    }
+
+    return (
+        <div> {listaFechas}</div>
+                   
+                
+    );
+}
+
 class UnaClase extends Component {
     render () {
         return (    
@@ -105,7 +177,8 @@ class UnaClase extends Component {
                             <h4 className="lesson_title">{ this.props.my_var }</h4>
                             <span className="lesson_teacher_name"> Lucia Carreño</span>
                         </div>
-                        <img src={ lesson_image_example } alt="imagen de portada de clase"/>
+                        <img src={ lesson_image_example 
+                        } alt="imagen de portada de clase"/>
                         <div className="lesson_footer">
                             <table className="fixed_table">
                                 <thead>
